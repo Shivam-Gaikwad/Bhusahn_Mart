@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base layout and typography */
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  @apply bg-dark text-slate-100 font-primary;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom container for consistent spacing */
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* Reset common elements */
+
+a {
+  @apply text-neon no-underline;
+}
+
+a:hover {
+  @apply text-neonSoft;
+}
+
+button {
+  @apply font-primary;
+}
+
+/* Dark mode scrollbar styling */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Fade-in animation used across sections */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animation delay helpers */
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Branding and UI elements */
+
+.bhusan-mart {
+  background-color: rgba(202, 221, 221, 0.523);
+  border: 2px solid bisque;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+.bhusan-mart:hover {
+  box-shadow: 0 0 15px rgb(56, 189, 248);
+}
+
+.glass-footer {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-xl;
+}
+
+.footer-title {
+  @apply text-white font-semibold mb-4 tracking-wide;
+}
+
+.footer-links li {
+  @apply text-white/70 text-sm mb-2 cursor-pointer hover:text-cyan-400 transition;
+}
